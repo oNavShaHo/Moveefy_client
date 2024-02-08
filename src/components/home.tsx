@@ -1,10 +1,10 @@
 "use client"
 import React from 'react'
 
-type Props = {user:Props}
+type Props = {}
 
-function Home({user}: Props) {
-  console.log(user);
+function Home({}: Props) {
+ // console.log(user);
   return (
     <main className="bg-gradient-to-r from-[rgb(165,142,255)] to-[#FF7AC2] h-screen flex flex-col justify-center items-center">
       <div className="flex gap-8">

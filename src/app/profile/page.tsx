@@ -66,7 +66,7 @@ export default function ProfilePage() {
           </button>
         </div>
       </nav>
-      <Home user={user} />
+      <Home/>
 
       <hr />
     </div>
