@@ -4,33 +4,32 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
-```bash
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+High Level Data Diagram 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![moveefy high level](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/b94839c5-0c29-4efd-99f2-d3b![login moveefy](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/48fc2d40-7259-4d59-83b8-75cc666cfb2d)
+9030c417c)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Login Page - 
+![login moveefy](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/82bdcfe7-c222-4128-9d54-5719d64f7347)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+Sign up Page -
+![signup moveefy](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/bba03f19-00fb-42ad-b0fa-88bf5fe5c94d)
+
+home page - 
+![home moveefy](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/28642680-6433-4230-a770-02352b827f9d)
+
+
