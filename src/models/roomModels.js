@@ -1,14 +1,23 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
-const roomSchema=new mongoose.Schema({
-  room_id: { type: Number, required: true },
-  createdBy:{
-    type:Schema.Types.ObjectId,
-  ref:'User',
-  required:true
+const roomSchema = new mongoose.Schema({
+  roomId: { type: Number, required: true, unique: true },
 
+  createdBy: {
+    type: String,
+  },
+  joinedBy: {
+    type: String,
+  },
 
-  }
-})
+  Player1: {
+    type: Boolean,
+  },
+  Player2: {
+    type: Boolean,
+  },
+});
 
-const Room = mongoose.models.rooms || mongoose.model("rooms", userSchema);
+const Room = mongoose.models.rooms || mongoose.model("rooms", roomSchema);
+
+export default Room;
