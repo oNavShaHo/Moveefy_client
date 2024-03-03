@@ -20,8 +20,7 @@ High Level Data Diagram
 ![moveefy high level](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/3ea1a107-a263-4a5b-8562-57497868f3e2)
 
 
-![login moveefy](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/48fc2d40-7259-4d59-83b8-75cc666cfb2d)
-9030c417c)
+
 
 
 Login Page - 
