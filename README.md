@@ -17,7 +17,8 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 High Level Data Diagram 
 
-![moveefy high level](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/b94839c5-0c29-4efd-99f2-d3b![login moveefy](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/48fc2d40-7259-4d59-83b8-75cc666cfb2d)
+![moveefy high level](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/b94839c5-0c29-4efd-99f2-d3b)
+![login moveefy](https://github.com/oNavShaHo/Moveefy_client/assets/106837111/48fc2d40-7259-4d59-83b8-75cc666cfb2d)
 9030c417c)
 
 
