@@ -29,13 +29,13 @@ function Home({}: Props) {
   async function cr() {
     console.log(user);
     setCreateRoom(true);
-    localStorage.setItem("isCreated", "true");
+  //  localStorage.setItem("isCreated", "true");
   }
 
   async function jr() {
     setJoinRoom(true);
 
-    localStorage.setItem("isJoined", "true");
+   // localStorage.setItem("isJoined", "true");
   }
 
   if (createRoom == false && joinRoom == false)

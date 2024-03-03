@@ -13,7 +13,7 @@ export default function Home() {
   var socket: any;
   socket = io("https://moveefy.onrender.com");
  
-  localStorage.clear();
+ // localStorage.clear();
   const handleJoin = () => {
     if (userName !== "" && roomId !== "") {
       console.log(userName, "userName", roomId, "roomId");
