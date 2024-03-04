@@ -1,3 +1,4 @@
+"use client"
 import React, { useEffect, useState, useRef } from "react";
 import style from "./chat.module.css";
 import { useRouter } from "next/navigation";
