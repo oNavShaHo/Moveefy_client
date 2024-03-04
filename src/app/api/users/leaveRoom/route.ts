@@ -7,7 +7,8 @@ export async function POST(request: NextRequest){
 try {
   
   const reqBody = await request.json();
-  const {roomId}=reqBody;
+  const roomId=reqBody;
+  console.log(roomId);
   const room1=await Room.findOne({roomId});
   console.log(room1);
   if( room1==null) 

@@ -29,13 +29,15 @@ function Home({}: Props) {
   async function cr() {
     console.log(user);
     setCreateRoom(true);
-  //  localStorage.setItem("isCreated", "true");
+    localStorage.setItem("isCreated", "true");
+    localStorage.setItem("isJoined","false");
   }
 
   async function jr() {
     setJoinRoom(true);
 
-   // localStorage.setItem("isJoined", "true");
+    localStorage.setItem("isJoined", "true");
+    localStorage.setItem("isCreated", "false");
   }
 
   if (createRoom == false && joinRoom == false)
@@ -62,6 +64,7 @@ function Home({}: Props) {
       </main>
     );
   else if (joinRoom == true && createRoom == false) {
+    
      router.push("/room");
   } else if (createRoom == true && joinRoom == false) {
      router.push("/room"); ;
