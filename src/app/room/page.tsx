@@ -33,8 +33,8 @@ export default function Home() {
   useEffect(() => {
     
     console.log(joinRoom,createRoom);
-
-  });
+    alert(joinRoom+" "+createRoom);
+  },[]);
 
   useEffect(() => {
     details();
@@ -79,6 +79,7 @@ export default function Home() {
   };
 
   function del() {
+    localStorage.clear();
     router.push("/");
     console.log(localStorage);
     // window.location.reload();
