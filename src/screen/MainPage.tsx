@@ -69,6 +69,7 @@ const MainPage = (props: Props) => {
             </button>
           </div>
         </nav>
+      
 
         <Home />
 

@@ -209,9 +209,12 @@ const ChatPage = ({ socket, username, roomId }: any) => {
       const res = await axios.post("api/users/leaveRoom", roomId);
       console.log(res);
       localStorage.clear();
-      router.push("/");
+    
     } catch (error) {
       alert(error);
+    }
+    finally{
+      router.push("/");
     }
   };
   const validateTime: any = (targetTime: any) => {

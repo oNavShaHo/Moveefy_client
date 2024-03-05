@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import MainPage from "@/screen/MainPage";
 import { TypeExContext } from "@/context/context";
 import axios from "axios";
+
 export default function ProfilePage() {
   const { user, setUser } = useContext(TypeExContext);
 
@@ -12,12 +13,13 @@ export default function ProfilePage() {
     setUser(res.data.data);
     console.log(user);
   };
+  
 
   useEffect(() => {
     getData();
   });
   if (user) {
-    return <MainPage />
+    return (<MainPage />)
   } else {
     return <div>Loading</div>;
   }
