@@ -1,8 +1,9 @@
-"use client";
+"use client"
 import styles from "@/app/page.module.css";
 import { io } from "socket.io-client";
 import { useState, useContext, useEffect } from "react";
 import ChatPage from "@/components/page";
+import { TypeExContext } from "@/context/context";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import Image from "next/image";
 import axios from "axios";
@@ -14,14 +15,30 @@ export default function Home() {
   const [userName, setUserName] = useState("");
   const [showSpinner, setShowSpinner] = useState(false);
   const [roomId, setroomId] = useState("");
-  const [user,setUser]=useState(null);
+  const [user, setUser] = useState(null);
   const [data, setData] = useState("nothing");
+  const [created, setCreated] = useState(false);
 
   var socket: any;
   socket = io("https://moveefy.onrender.com");
+  const {
+   
+    setRoomId,
+    createRoom,
+    setCreateRoom,
+    setJoinRoom,
+    joinRoom,
+  } = useContext(TypeExContext);
+
+  useEffect(() => {
+    
+    console.log(joinRoom,createRoom);
+
+  });
 
   useEffect(() => {
     details();
+    
     if (localStorage.getItem("roomId") != null) {
       console.log(localStorage.getItem("roomId"));
       socket.emit("join_room", roomId);
@@ -62,17 +79,17 @@ export default function Home() {
   };
 
   function del() {
-    localStorage.clear();
     router.push("/");
-
+    console.log(localStorage);
+    // window.location.reload();
   }
 
   // localStorage.clear();
-   const chandleJoin = async () => {
+  const chandleJoin = async () => {
     try {
       const res: any = await axios.post("/api/users/createRoom", {
         user,
-        roomId
+        roomId,
       });
       toast(res);
       if (userName !== "" && roomId !== "") {
@@ -91,15 +108,15 @@ export default function Home() {
       }
     } catch (error) {
       alert("choose another roomId,room already exist");
-      console.log("error",error);
+      console.log("error", error);
     }
   };
 
-  const jhandleJoin = async() => {
+  const jhandleJoin = async () => {
     try {
       const res: any = await axios.post("/api/users/joinRoom", {
         user,
-        roomId
+        roomId,
       });
       toast(res);
       if (userName !== "" && roomId !== "") {
@@ -117,16 +134,15 @@ export default function Home() {
         alert("Please fill in Username and Room Id");
       }
     } catch (error) {
-       alert("Room not exist, press Moveefy icon to go back")
+      alert("Room not exist, press Moveefy icon to go back");
     }
-    
   };
 
   return (
     <div className="bg-gradient-to-r from-[rgb(165,142,255)] to-[#FF7AC2] min-h-screen  flex justify-center flex-col items-center">
       <nav className="flex justify-between  items-center px-5 py-2 lg:px-6 self-start w-full mb-auto">
         <Image
-          onClick={del}
+          onClick={()=>del()}
           src="/moveefy.png"
           alt="img"
           height={60}
@@ -168,14 +184,10 @@ export default function Home() {
         />
         <button
           className={styles.main_button}
-          onClick={
-            localStorage.getItem("isCreated") == "true"
-              ? chandleJoin
-              : jhandleJoin
-          }
+          onClick={createRoom == true ? chandleJoin : jhandleJoin}
         >
           {!showSpinner ? (
-            localStorage.getItem("isCreated") == "true" ? (
+            createRoom == true ? (
               "create"
             ) : (
               "join"

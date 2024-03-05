@@ -18,12 +18,19 @@ const ChatPage = ({ socket, username, roomId }: any) => {
   });
 
   const details = async () => {
-    const res = await axios.get("api/users/me");
-    setUser(res.data.data);
-   // console.log(user);
-    if (roomId.length == 0) {
-      localStorage.clear();
+    try{
+      const res = await axios.get("api/users/me");
+      setUser(res.data.data);
+     // console.log(user);
+      if (roomId.length == 0) {
+        localStorage.clear();
+      }
     }
+    catch(error)
+    {
+      router.push("login");
+    }
+    
   //  console.log(roomId);
   };
 

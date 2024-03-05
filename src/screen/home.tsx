@@ -1,4 +1,4 @@
-"use client";
+
 import React, { useState, useContext, useEffect } from "react";
 import { TypeExContext } from "@/context/context";
 import { useRouter } from "next/navigation";
@@ -23,21 +23,26 @@ function Home({}: Props) {
    
   useEffect(() => {
     if (localStorage.getItem("isCreated") == "true") setCreateRoom(true);
-    else if (localStorage.getItem("isJoined") == "true") setJoinRoom(true);
+    else if (localStorage.getItem("isJoined") == "true") {setJoinRoom(true);
+    
+    }
+    console.log(localStorage)
   });
 
-  async function cr() {
+   function cr() {
     console.log(user);
     setCreateRoom(true);
+  
     localStorage.setItem("isCreated", "true");
-    localStorage.setItem("isJoined","false");
+ 
+    console.log(localStorage.getItem("isCreated"),localStorage);
   }
 
-  async function jr() {
+   function jr() {
     setJoinRoom(true);
-
+   
     localStorage.setItem("isJoined", "true");
-    localStorage.setItem("isCreated", "false");
+   
   }
 
   if (createRoom == false && joinRoom == false)

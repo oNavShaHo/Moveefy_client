@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useContext, useEffect } from "react";
 import MainPage from "@/screen/MainPage";
 import { TypeExContext } from "@/context/context";

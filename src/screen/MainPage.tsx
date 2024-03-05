@@ -1,4 +1,4 @@
-"use client";
+
 import axios from "axios";
 import { TypeExContext } from "@/context/context";
 import Image from "next/image";
