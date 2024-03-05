@@ -33,7 +33,7 @@ export default function Home() {
   useEffect(() => {
     
     console.log(joinRoom,createRoom);
-    alert(joinRoom+" "+createRoom);
+   // alert(joinRoom+" "+createRoom);
   },[]);
 
   useEffect(() => {
